@@ -34,11 +34,17 @@
 
     document.addEventListener('DOMContentLoaded', function(){
         let textArea = document.querySelector('#text');
+<<<<<<< HEAD
         let result = document.querySelector('#result');
         let countButton = document.querySelector('#count-button');
         let resetButton = document.querySelector('#reset-button');
 
         countButton.addEventListener('click', function(){
+=======
+        let button = document.querySelector('#count-button');
+        let result = document.querySelector('#result');
+        button.addEventListener('click', function(){
+>>>>>>> parent of bbf1b69 (reset button added)
             let text = textArea.value;
             let wordsCount = countWords(text);
             let withoutSpaces = text.length - countSpaces(text);
@@ -50,6 +56,7 @@
 <<<<<<< HEAD
 
         textArea.addEventListener('keyup', function(){
+<<<<<<< HEAD
             changeButtonsStatus(textArea.value.length > 0);
         });
 
@@ -57,7 +64,15 @@
             textArea.value = '';
             changeButtonsStatus(false);
         });
-=======
->>>>>>> parent of fe4e263 (button inactivation added)
+
+parent of fe4e263 (button inactivation added)
+
+            if (textArea.value.length > 0) {
+                button.removeAttribute('disabled');
+            } else {
+                button.setAttribute('disabled', 'disabled');
+            }
+        });
+ parent of bbf1b69 (reset button added)
     });
 }());
